@@ -11,7 +11,7 @@ $(document).ready(function() {
                     var weekdays = ["Dom", "Lun", "Mar", "Mié", "Jue", "Vie", "Sáb"];
                     var months = ["Ene", "Feb", "Mar", "Abr", "Mayo", "Jun", "Jul", "Ago", "Sept", "Oct", "Nov", "Dic"];
                     break;                
-                default:    // "en" -> Standard: Englisch
+                default:     // "En" -> Estándar: Inglés
                     var weekdays = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
                     var months = ["Jan", "Feb", "Mar", "Apr", "May", "June", "July", "Aug", "Sept", "Oct", "Nov", "Dec"];
                     break;
@@ -26,15 +26,14 @@ $(document).ready(function() {
 
             var hour = date.getHours();
 
-                ///// AM, PM für Language "en"
+                ///// AM, PM "en"
                 if ( language == "en" ) {
-                    //it is pm if hours from 12 onwards
                     suffix = (hour >= 12)? 'p.m.' : 'a.m.';
 
-                    //only -12 from hours if it is greater than 12 (if not back at mid night)
+                    // Única de -12 horas si es mayor de 12 (si no volver a la medianoche)
                     hour = (hour > 12)? hour -12 : hour;
 
-                    //if 00 then it is 12 am
+                   // Si 00 entonces es 12 a.m.
                     hour = (hour == '00')? 12 : hour;
             }
 
@@ -55,19 +54,17 @@ $(document).ready(function() {
               return num;
             }
 
-            //Build the clock.
+           
     function refreshTime(clock_id) {
         var now = getTime();
             clock = $.find('#'+clock_id);
-            //$(clock).find('.date').html(now.day + ', ' + now.date + '. ' + now.month + ' ' + now.year);
             $(clock).find('.time').html("<span class='hour'>" + now.hour + "</span>:<span class='minute'>" + now.minute + "</span>:<span class='second'>" + now.second + "</span>");
 
-            if ( typeof(suffix) != "undefined") { // am oder pm ?
+            if ( typeof(suffix) != "undefined") { 
             $(clock).find('.time').append('<strong>'+ suffix +'</strong>');
             }
        }
 
-        //Individual clock_id
         var clock_id = $(this).attr('id');
             refreshTime(clock_id);
             setInterval( function() { refreshTime(clock_id) }, 1000);    
@@ -87,8 +84,8 @@ $(document).ready(function() {
                 rest:0},
                  {zona:"Sao Paulo",
                 rest:2},
-                 {zona:"Santiago",
-                rest:1},
+                 {zona:"Peru",
+                rest:2},
                  {zona:"Mexico",
                 rest:0},
                  {zona:"Brasilia",
