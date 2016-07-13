@@ -1,0 +1,89 @@
+body {
+    background-image: url(../img.jpg);
+    background-size: cover;
+    width: 100%;
+}
+html {
+    font-family: 'Ubuntu', Arial, sans-serif;
+}
+        
+div.clock {
+    width: 300px;
+    text-align: center;
+    border:1px solid white;
+    margin: 0 auto;
+    color: white;
+}
+
+div.clock a {
+    color: #fff;
+    font-size: 18px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+div.clock a:hover {
+    text-decoration: underline;
+}
+
+div.clock div.date {
+    color: white;
+    font-size: 1.5em;
+    margin: 0px 0;
+}
+
+div.clock div.time {
+    font-size: 3em;
+    font-weight: 200;
+}
+
+div.clock div.time span {
+    border-radius: 5px;
+    padding: 1px 4px 3px 4px;
+    color: #2EFCFE;   
+}
+
+div.clock div.time strong {
+    font-weight: 100;
+    font-size: 1em;
+    margin-left: 5px;
+    color: #fff;
+}
+
+.contentclock h1{
+    font-size: 20px;
+    text-align: center;
+    color: #2EFCFE;
+}
+
+.contentclock p{
+    font-size: 16px;
+    text-align: center;
+    color: #fff;
+
+}
+ .cajaGrande {
+    color: #CFD3D4;
+    padding: 50px;
+    font-size: 2.5em;
+    font-family: fantasy;
+    height: 200px; 
+}
+p {
+  font-size: 20px;
+  text-align: left;
+}
+
+div {
+  color: #CFD3D4;
+  padding-top: 2%; }
+span.hora-ciudadPais{
+  font-size: 15px;
+}
+.btn-lg {
+    border-radius: 40px;
+    color: blue;
+}
+.close {
+    color: blue;
+}
